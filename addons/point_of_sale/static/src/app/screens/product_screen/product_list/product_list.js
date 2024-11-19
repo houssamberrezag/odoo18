@@ -50,6 +50,13 @@ export class ProductsWidget extends Component {
         } else {
             list = db.get_product_by_category(this.selectedCategoryId);
         }
+        if(list.length === 1 && list[0].barcode == this.searchWord){
+            console.log(list[0].barcode);
+            this.pos.addProductToCurrentOrder(list[0]);
+            //this.trigger('click-product', list[0]);
+            //document.getElementById('clear-search-btn')?.click();
+            this.clearSearch();
+        }
         return list.sort(function (a, b) {
             return a.display_name.localeCompare(b.display_name);
         });

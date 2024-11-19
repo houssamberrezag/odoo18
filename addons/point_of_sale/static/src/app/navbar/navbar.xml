@@ -4,12 +4,15 @@
     <t t-name="point_of_sale.Navbar" owl="1">
         <div class="pos-topheader">
             <div t-if="pos.tempScreen" class="block-top-header" />
-            <div t-if="!ui.isSmall" class="pos-branding">
+            <!-- <div t-if="!ui.isSmall" class="pos-branding">
                 <img class="pos-logo" t-on-click="() => debug.toggleWidget()" src="/point_of_sale/static/src/img/logo.png" alt="Logo" />
-            </div>
+            </div> -->
             <div class="pos-rightheader">
                 <BackButton t-if="showBackButton()"/>
                 <div class="status-buttons">
+                    <div class="cash-move-button" t-on-click="fullscreen">
+                        <i class="fa fa-expand" aria-hidden="true"></i>
+                    </div>
                     <CashierName />
                     <SaleDetailsButton t-if="hardwareProxy.printer" isHeaderButton="true"/>
                     <ProxyStatus t-if="pos.config.use_proxy" />
@@ -24,11 +27,11 @@
                         <li class="menu-item">
                             <i class="fa fa-bars" aria-hidden="true"></i>
                             <ul class="sub-menu">
-                                <li class="menu-item navbar-button ticket-button" t-on-click="onTicketButtonClick">
+                                <!-- <li class="menu-item navbar-button ticket-button" t-on-click="onTicketButtonClick">
                                     <div class="with-badge" t-att-badge="orderCount">
                                         <span>Orders</span>
                                     </div>
-                                </li>
+                                </li> -->
                                 <li t-if="showCashMoveButton" class="menu-item navbar-button" t-on-click="onCashMoveButtonClick">
                                     <span>Cash In/Out</span>
                                 </li>
