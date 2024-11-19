@@ -14,6 +14,7 @@
             </t>
             <t t-foreach="getElements()" t-as="element" t-key="element_index">
                 <t t-if="!element.hide">
+                <t t-if="element.id == 'settings' || element.id == 'logout'">
                     <DropdownItem
                         t-if="element.type == 'item' || element.type == 'switch'"
                         href="element.href"
@@ -31,6 +32,7 @@
                         <t t-else="" t-out="element.description"/>
                     </DropdownItem>
                     <div t-if="element.type == 'separator'" role="separator" class="dropdown-divider"/>
+                </t>
                 </t>
             </t>
         </Dropdown>
