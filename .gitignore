@@ -49,3 +49,6 @@ package.json
 /man/
 /share/
 /src/
+odoo-config
+master password.txt
+odoo.log
