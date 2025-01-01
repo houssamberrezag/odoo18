@@ -4842,7 +4842,7 @@ msgstr "code..."
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.product_product_view_form_add
 msgid "e.g. Cheese Burger"
-msgstr "par ex. Cheeseburger"
+msgstr "par ex. Doliprane"
 
 #. module: website_sale
 #: model_terms:ir.ui.view,arch_db:website_sale.s_dynamic_snippet_products_template_options

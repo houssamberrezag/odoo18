@@ -47,7 +47,7 @@ import { url } from "@web/core/utils/urls";
  * @extends {Component<Props, Env>}
  */
 export class Message extends Component {
-    // This is the darken version of #88670d
+    // This is the darken version of #049faf
     static SHADOW_LINK_COLOR = "#66598f";
     static SHADOW_LINK_HOVER_COLOR = "#564b79";
     static components = {

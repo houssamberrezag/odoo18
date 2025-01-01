@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Call this template instead of "web.assets_tests" to have the proper conditional check -->
     <template id="conditional_assets_tests" name="Tests Assets Bundle">
         <t t-if="'tests' in debug or test_mode_enabled">
-            <!-- To allow all tests assets and tours to be in the same bundle, the assets_tests bundle ignores missing dependencies -->
             <t t-call-assets="web.__assets_tests_call__" defer_load="True" />
         </t>
     </template>
@@ -102,14 +100,14 @@
         </div>
     </template>
 
-    <template id="web.login_layout" name="Login Layout">
+   <!-- <template id="web.login_layout" name="Login Layout">
         <t t-call="web.frontend_layout">
             <t t-set="html_data" t-value="{'style': 'height: 100%;'}"/>
             <t t-set="body_classname" t-value="'bg-100'"/>
             <t t-set="no_header" t-value="True"/>
             <t t-set="no_footer" t-value="True"/>
 
-            <div class="container py-5">
+             <div class="container py-5">
                 <div t-attf-class="card border-0 mx-auto bg-100 {{login_card_classes}} o_database_list" style="max-width: 300px;">
                     <div class="card-body">
                         <div t-attf-class="text-center pb-3 border-bottom {{'mb-3' if form_small else 'mb-4'}}">
@@ -126,7 +124,7 @@
                 </div>
             </div>
         </t>
-    </template>
+    </template> -->
 
     <template id="web.login" name="Login">
         <t t-call="web.login_layout">
@@ -251,7 +249,7 @@
         <t t-call="web.layout">
             <t t-set="head_web">
                 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-                <meta name="theme-color" content="#88670d"/>
+                <meta name="theme-color" content="#049faf"/>
                 <script type="text/javascript">
                     odoo.__session_info__ = <t t-out="json.dumps(session_info)"/>;
                     odoo.reloadMenus = () => fetch(`/web/webclient/load_menus/${odoo.__session_info__.cache_hashes.load_menus}`).then(res => res.json());
